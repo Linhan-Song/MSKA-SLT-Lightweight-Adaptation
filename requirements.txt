@@ -1,0 +1,16 @@
+# Install the CUDA 11.8 build of PyTorch 2.0.1 separately when reproducing the
+# dissertation environment.
+numpy>=1.23,<2
+PyYAML>=6.0
+transformers==4.28.1
+torchvision==0.15.2
+sentencepiece>=0.1.99
+portalocker>=2.8
+einops>=0.6
+opencv-python>=4.7
+matplotlib>=3.7
+seaborn>=0.12
+Pillow>=9.5
+scipy>=1.10
+tqdm>=4.65
+loguru>=0.7

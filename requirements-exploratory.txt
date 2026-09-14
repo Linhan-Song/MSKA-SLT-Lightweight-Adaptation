@@ -1,0 +1,5 @@
+# Optional dependencies for the Qwen and LoRA experiments.
+-r requirements.txt
+peft==0.10.0
+accelerate==0.29.3
+bitsandbytes==0.43.1

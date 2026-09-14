@@ -1,0 +1,3 @@
+# Extra dependency used when creating the Recognition feature cache.
+-r requirements.txt
+tensorflow==2.13.1

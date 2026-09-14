@@ -1,0 +1,38 @@
+experiment: frozen_mbart
+seed: 0
+mska_config: configs/base/phoenix-2014t_s2t.yaml
+output_dir: outputs/bottleneck_b256_avg32_seed0
+data:
+  train_manifest: data/Phoenix-2014T/recognition_features/train.jsonl
+  dev_manifest: data/Phoenix-2014T/recognition_features/dev.jsonl
+  test_manifest: data/Phoenix-2014T/recognition_features/test.jsonl
+model:
+  pretrained_component_dir: pretrained_models/Phoenix-2014T_SLT/components
+  train_vlmapper: false
+  dropout: 0.1
+  sequence_processing:
+    mode: average_pool
+    target_length: 32
+  interface_adapter:
+    type: gated_residual
+    bottleneck_dim: 256
+    initial_gate: -4.0
+  temporal_refiner:
+    enabled: false
+training:
+  epochs: 20
+  early_stopping_patience: 4
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  adapter_learning_rate: 0.0002
+  weight_decay: 0.01
+  num_workers: 0
+  checkpoint_every_steps: 1000
+generation:
+  num_beams: 5
+  max_length: 100
+  length_penalty: 1.0
+evaluation:
+  run_test_after_training: false
+runtime:
+  max_gpu_hours: 18

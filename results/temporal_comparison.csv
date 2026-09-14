@@ -1,0 +1,4 @@
+attention_type,parameters,bleu1,bleu4,rouge_l,loss
+Local,174722,53.6685,28.3093,52.9478,22.6533
+Global,174722,53.1979,28.0327,52.8208,22.6760
+Local-Global,211970,53.5418,28.0692,52.8308,22.6525
