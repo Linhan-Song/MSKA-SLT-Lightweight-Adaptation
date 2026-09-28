@@ -12,6 +12,7 @@ venv/
 /downloads/
 /pretrained_models/
 /outputs/
+/local_grid_search_runs/
 
 *.pth
 *.pt
