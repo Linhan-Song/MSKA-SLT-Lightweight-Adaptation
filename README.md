@@ -142,6 +142,33 @@ python scripts/evaluate_checkpoint.py \
   --resume outputs/final_two_stage_seed0/best_checkpoint.pth
 ```
 
+## Held-out test results
+
+After all architecture and hyperparameter choices were fixed on the development
+set, the saved checkpoints were evaluated once on all 642 PHOENIX14T test
+examples with beam size 5, maximum length 100 and length penalty 1.0.
+
+| Condition | Test BLEU-4 | Test ROUGE-L | Task-specific parameters |
+| --- | ---: | ---: | ---: |
+| Original checkpoint | 28.7529 | 53.0698 | 0 |
+| Full VLMapper | 28.5577 ± 0.1796 | 52.5237 ± 0.1177 | 1,574,912 |
+| Gated Residual-128 | 28.7811 ± 0.2089 | 52.7368 ± 0.1910 | 265,345 |
+| Gated Residual-128 + Local d96 | 28.7808 ± 0.0219 | 52.9213 ± 0.1162 | 440,067 |
+
+Values for trained conditions are the mean ± sample standard deviation over
+seeds 0, 1 and 2. The Original checkpoint is deterministic and is reported
+once. Gated Residual uses 83.15% fewer trainable parameters than Full VLMapper
+and obtains comparable test performance. The Local module's development-set
+gain does not persist in the three-seed test mean: its test BLEU-4 differs from
+Gated Residual by -0.0003. Paired bootstrap confidence intervals include zero
+for every seed-wise comparison, so these test differences are not presented as
+statistically significant.
+
+The complete metrics, seed-wise results, 5,000-sample paired bootstrap analysis
+and file-hash audit are in [`results/TEST_RESULTS.md`](results/TEST_RESULTS.md).
+They can be regenerated from the original experiment workspace with
+`scripts/summarize_test_results.py`.
+
 ## Configuration groups
 
 - `interface_adapter` contains the bottleneck-width comparison and the Plain,

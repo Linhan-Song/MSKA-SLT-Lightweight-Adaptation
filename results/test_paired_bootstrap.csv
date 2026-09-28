@@ -1,0 +1,7 @@
+candidate,baseline,seed,observed_bleu4_difference,ci95_low,ci95_high,probability_positive,two_sided_p,bootstrap_samples
+Gated Residual-128,Full VLMapper,0,0.6196,-0.0536,1.3180,0.9654,0.0692,5000
+Gated Residual-128,Full VLMapper,1,0.1879,-0.5086,0.9112,0.7012,0.5976,5000
+Gated Residual-128,Full VLMapper,2,-0.1372,-0.8810,0.6152,0.3596,0.7192,5000
+Gated Residual-128 + Local d96,Gated Residual-128,0,-0.2439,-0.7671,0.2534,0.1810,0.3620,5000
+Gated Residual-128 + Local d96,Gated Residual-128,1,0.0912,-0.4389,0.6409,0.6252,0.7496,5000
+Gated Residual-128 + Local d96,Gated Residual-128,2,0.1516,-0.2715,0.5697,0.7574,0.4852,5000

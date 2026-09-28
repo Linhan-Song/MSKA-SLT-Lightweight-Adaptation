@@ -1,0 +1,5 @@
+condition,seeds,task_specific_parameters,bleu1_mean,bleu1_std,bleu2_mean,bleu2_std,bleu3_mean,bleu3_std,bleu4_mean,bleu4_std,rouge_mean,rouge_std,loss_mean,loss_std
+Original checkpoint,1,0,54.2206,,42.0191,,34.1764,,28.7529,,53.0698,,22.6190,
+Full VLMapper,3,1574912,53.6770,0.1192,41.6126,0.1907,33.9396,0.1907,28.5577,0.1796,52.5237,0.1177,20.2226,0.0174
+Gated Residual-128,3,265345,53.8994,0.2915,41.9585,0.2855,34.1880,0.2356,28.7811,0.2089,52.7368,0.1910,20.3137,0.0234
+Gated Residual-128 + Local d96,3,440067,53.8147,0.1277,41.8795,0.0518,34.1665,0.0319,28.7808,0.0219,52.9213,0.1162,20.2568,0.0350

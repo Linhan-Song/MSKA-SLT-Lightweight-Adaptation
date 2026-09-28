@@ -1,0 +1,129 @@
+{
+  "test_samples": 642,
+  "manifest_counts": {
+    "train": 7096,
+    "dev": 519,
+    "test": 642
+  },
+  "manifest_id_overlaps": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "all_references_identical": true,
+  "metric_recomputation_tolerance": 1e-10,
+  "bootstrap_seed": 20260928,
+  "bootstrap_samples": 5000,
+  "runs": [
+    {
+      "system": "Original checkpoint",
+      "seed": null,
+      "directory": "outputs/official_b1_frozen_eval",
+      "checkpoint": "pretrained_models/Phoenix-2014T_SLT/best.pth",
+      "checkpoint_sha256": "622ccb770dd5e7fbc34ceeb57cf0c64ad2f198fa127a599ccb3b1a6ec90e62b5",
+      "samples": 642,
+      "metrics_sha256": "01087ab2d609f8c6a2579eda347147cfafc1a026305b29acce7b3e9e6867444b",
+      "predictions_sha256": "a71482d924488d12fbaaa48aba47e2f37dccc5baa454ec406f569598340bbbf6",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Full VLMapper",
+      "seed": 0,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/full_vlmapper_seed0",
+      "checkpoint": "outputs/official_a1_vlmapper_finetune/best_checkpoint.pth",
+      "checkpoint_sha256": "16dd2398b3ed6a2f2658c33682c0649248319b22cdcb67ce1b7e6ad69b9fa5b8",
+      "samples": 642,
+      "metrics_sha256": "1bd71bccaa8a1b2275136c0508919512d3a051ddfa675d181573b1b16ac6b90a",
+      "predictions_sha256": "8f1eff24a58b9394b43a0343dd73776ef80bfeac405a68dd27f25999e58a2eba",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Full VLMapper",
+      "seed": 1,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/full_vlmapper_seed1",
+      "checkpoint": "outputs/next_official_a1_vlmapper_seed1/best_checkpoint.pth",
+      "checkpoint_sha256": "962a15e7029d2eabaf9011276101e8f6f4b3c335cb334fbeee5242f8c901c785",
+      "samples": 642,
+      "metrics_sha256": "87f04734340f3ed77fa805f74a721290dce19a59331fa9a05e749a2bae9ac195",
+      "predictions_sha256": "e6e11ccc1d21315fb79fde3ffdb2609391738c5699804476237b87f3a9d0c410",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Full VLMapper",
+      "seed": 2,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/full_vlmapper_seed2",
+      "checkpoint": "outputs/next_official_a1_vlmapper_seed2/best_checkpoint.pth",
+      "checkpoint_sha256": "a449a37f184363d3e0c93cc23d505a42261706fab192f663d05c1402dfad8498",
+      "samples": 642,
+      "metrics_sha256": "93c8060408a81d6ebd3ff519fc5de953d31ae5bbda4cb29c34d7e37e412bd2e4",
+      "predictions_sha256": "b90aab8e4e73319dc9c465d7039f4158386437c079d3a9ecc9f50c1ed950d502",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128",
+      "seed": 0,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/nopool_gated128_seed0",
+      "checkpoint": "outputs/local_nopool_gated128_seed0/best_checkpoint.pth",
+      "checkpoint_sha256": "1b1bc8a71a59cc9e0afc2d379b0d8474a8688ad9eed9187e15ef50901d55b29f",
+      "samples": 642,
+      "metrics_sha256": "fb260fbc3d07ee4e6d41dbd8989fdbbbf0edf49c3b99a1c5928fd6f79f07cdb5",
+      "predictions_sha256": "cab7dca0f85252460e93a3ca280b99c8c8afbe907cdbd9e3e3276c95fa81ff8b",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128",
+      "seed": 1,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/nopool_gated128_seed1",
+      "checkpoint": "outputs/local_nopool_gated128_seed1/best_checkpoint.pth",
+      "checkpoint_sha256": "2878ef6ec1b6ae24e1fc604d4e333bc121dc31af94d4d0c670faa6ba0406dce1",
+      "samples": 642,
+      "metrics_sha256": "6ff2f2d9972e9bd08214605bc26a40cb65dfe0b7b534876d61bfae33e0d963c0",
+      "predictions_sha256": "ba112faabee3ec16a33e7105dc8a496a98bb1d5afbcfeb44a831b8f7602e46c6",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128",
+      "seed": 2,
+      "directory": "outputs/baseline_test_eval_seeds012_20260830/nopool_gated128_seed2",
+      "checkpoint": "outputs/local_nopool_gated128_seed2/best_checkpoint.pth",
+      "checkpoint_sha256": "01fa18bac8ff7a9c370e94c251e8f64c2108f1416b9538ec51cab1ac3a4600d8",
+      "samples": 642,
+      "metrics_sha256": "82d2c4c8025212f3a17380bc59bef9b755bfdea88e5ba32bc43f53f94974e32d",
+      "predictions_sha256": "367714323ba61ebf5b36fd59da84058460c52348279100de8a361254b8ad229a",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128 + Local d96",
+      "seed": 0,
+      "directory": "outputs/final_local_r4_d96_h4_f192_seed0_test_eval",
+      "checkpoint": "outputs/local_nopool_gated128_local_sweep_r4_d96_h4_f192_seed0/best_checkpoint.pth",
+      "checkpoint_sha256": "0a1b8e936e3faa38382ff9d6fab0d543486a0ff8ac0556f0c8b48e45f2d5b0d1",
+      "samples": 642,
+      "metrics_sha256": "52a98a67c4c99e41c981d053f4f1875958cecd2ae59c8d65453b31fee42ed961",
+      "predictions_sha256": "4c0a1025e85a4d65683ed750f6826de63429f37ab41da8ed4d12fd4f123bfce1",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128 + Local d96",
+      "seed": 1,
+      "directory": "outputs/final_local_r4_d96_h4_f192_seed1_test_eval",
+      "checkpoint": "outputs/local_nopool_gated128_local_best_r4_d96_h4_f192_seed1/best_checkpoint.pth",
+      "checkpoint_sha256": "f1031e03f368414955b0876b1f82fe0b4a4fc260ef984bbe28737ff9880ff86f",
+      "samples": 642,
+      "metrics_sha256": "a7ff01e78d2d8ed8db6e8ec18f30eed6972450b0fb989e138d3836357f89b631",
+      "predictions_sha256": "b09a96390afa6600cf5c976eeb4f4d014c18fd8f82281afa554cd2fe1d2778ac",
+      "max_recomputation_error": 0.0
+    },
+    {
+      "system": "Gated Residual-128 + Local d96",
+      "seed": 2,
+      "directory": "outputs/final_local_r4_d96_h4_f192_seed2_test_eval",
+      "checkpoint": "outputs/local_nopool_gated128_local_best_r4_d96_h4_f192_seed2/best_checkpoint.pth",
+      "checkpoint_sha256": "37ce2fa1367d3d81203536f6f68c5425736dcb88843fdf7d733d5aae2cc0893e",
+      "samples": 642,
+      "metrics_sha256": "9f1cb5c6a6daac8bc655d8165966b9dd8d901e6008f7c4188083117e7dcb04a2",
+      "predictions_sha256": "4617e5945d797eb0a42414d600e24d5d545fdd3d8dfcccae3b6094c7b4623e3c",
+      "max_recomputation_error": 0.0
+    }
+  ]
+}
